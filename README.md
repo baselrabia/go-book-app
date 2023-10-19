@@ -62,3 +62,34 @@ For creating a HTTP server, you can use echo:
 Documentation for testing echo endpoints:
 
 -   https://echo.labstack.com/guide/testing/
+
+to run test cases 
+
+```bash
+go test -v
+```
+
+### Repository Pattern 
+Repository pattern is a design pattern that we will use in our application. It's basically a way of encapsulating the data access layer logic
+In the context of Go and databases, it's common to use repositories in order to abstract away the underlying data source from your business logic.
+ 
+-  https://www.linkedin.com/pulse/what-repository-pattern-alper-sara%C3%A7/
+-  https://medium.com/@pererikbergman/repository-design-pattern-e28c0f3e4a30
+
+### Dockerization 
+For Create a dockerfile for your application
+
+- https://docs.docker.com/language/golang/build-images/
+
+- https://david-yappeter.medium.com/dockerize-go-application-easily-cf6776d5c05e
+
+
+To build the docker image run this command in your terminal from root directory of project:
+```bash
+docker build -t go-restapi .
+```
+After building the image, you can start it with this command:
+
+```bash
+docker run --name restapi -d -p 8080:8080 go-restapi
+```
